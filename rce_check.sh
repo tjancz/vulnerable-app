@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 echo "RCE check"
 var1 = $(grep -r --include=*.{cc,h} "Runtime.getRuntime().exec(" .)
+echo $var1
 if [ -z "$var1" ]
 then
       return 0
